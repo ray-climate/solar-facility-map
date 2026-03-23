@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Global Solar PV Facility Inventory</title>
+    <meta
+      name="description"
+      content="Interactive global map for utility-scale solar PV facility polygons."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/maplibre-gl@5.19.0/dist/maplibre-gl.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-bg" aria-hidden="true"></div>
+
+    <main class="layout">
+      <aside class="sidebar" aria-label="Control panel">
+        <header class="sidebar-header">
+          <p class="eyebrow">Published Dataset Explorer</p>
+          <h1>Global Solar PV Facility Inventory</h1>
+          <p class="subtitle">
+            140,945 polygon footprints across 181 countries, mapped by year and footprint area.
+          </p>
+        </header>
+
+        <details class="panel-collapsible" open>
+          <summary>Dataset Summary</summary>
+          <div class="panel-content">
+            <section class="stats-grid" aria-label="Dataset summary">
+              <article class="metric-card">
+                <p class="metric-label">Facilities</p>
+                <p class="metric-value" id="metric-facilities">-</p>
+              </article>
+              <article class="metric-card">
+                <p class="metric-label">Countries</p>
+                <p class="metric-value" id="metric-countries">-</p>
+              </article>
+              <article class="metric-card">
+                <p class="metric-label">Year Range</p>
+                <p class="metric-value" id="metric-years">-</p>
+              </article>
+              <article class="metric-card">
+                <p class="metric-label">Total Area</p>
+                <p class="metric-value" id="metric-area">-</p>
+              </article>
+            </section>
+          </div>
+        </details>
+
+        <details class="panel-collapsible" open>
+          <summary>Live Intro Preview</summary>
+          <div class="panel-content">
+            <div id="sidebar-globe" class="sidebar-globe" aria-label="Rotating earth preview"></div>
+            <p class="preview-caption">Rotating Earth with blinking global PV points</p>
+          </div>
+        </details>
+
+        <details class="panel-collapsible">
+          <summary>Year Legend</summary>
+          <div class="panel-content">
+            <div id="legend" class="legend"></div>
+          </div>
+        </details>
+
+
+        <footer class="sidebar-footer">
+          <a id="paper-link" href="#" target="_blank" rel="noreferrer noopener">Paper</a>
+          <a id="zenodo-link" href="#" target="_blank" rel="noreferrer noopener">Zenodo</a>
+          <a id="github-link" href="#" target="_blank" rel="noreferrer noopener">GitHub</a>
+        </footer>
+      </aside>
+
+      <section class="map-shell" aria-label="Map view">
+        <div class="map-toolbar">
+          <div class="hidden" aria-hidden="true">
+            <p class="toolbar-title" id="toolbar-title"></p>
+          </div>
+          <div class="toolbar-actions">
+            <button id="download-visible" class="btn-ghost" type="button">Download Visible</button>
+            <button id="fit-global" class="btn-solid" type="button">Reset View</button>
+          </div>
+        </div>
+
+        <div id="map"></div>
+
+        <article id="feature-card" class="feature-card hidden" aria-live="polite">
+          <h3>Facility Detail</h3>
+          <dl>
+            <div><dt>PV_ID</dt><dd id="fc-pvid">-</dd></div>
+            <div><dt>Country</dt><dd id="fc-country">-</dd></div>
+            <div><dt>Year</dt><dd id="fc-year">-</dd></div>
+            <div><dt>Area</dt><dd id="fc-area">-</dd></div>
+            <div><dt>Latitude</dt><dd id="fc-lat">-</dd></div>
+            <div><dt>Longitude</dt><dd id="fc-lon">-</dd></div>
+          </dl>
+        </article>
+      </section>
+    </main>
+
+    <script src="https://unpkg.com/maplibre-gl@5.19.0/dist/maplibre-gl.js"></script>
+    <script src="https://unpkg.com/pmtiles@4.3.0/dist/pmtiles.js"></script>
+    <script src="./config.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

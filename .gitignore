@@ -1,0 +1,9 @@
+data/
+.tools/
+.martin.pid
+.martin.log
+.web.pid
+.web.log
+.DS_Store
+.claude/
+node_modules/

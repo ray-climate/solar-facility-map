@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  martin:
+    image: ghcr.io/maplibre/martin:latest
+    container_name: pv-dashboard-martin
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./data:/data:ro
+    command: >
+      --listen-addresses 0.0.0.0:3000
+      /data/global_pv_facility_inventory.mbtiles
+    restart: unless-stopped
