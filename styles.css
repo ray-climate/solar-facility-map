@@ -676,6 +676,20 @@ body[data-theme="studio"] .map-status {
   display: none;
 }
 
+.map-logos {
+  position: absolute;
+  left: 12px;
+  bottom: 32px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 2;
+}
+
+.map-logos img {
+  border-radius: 6px;
+}
+
 .feature-card {
   position: absolute;
   right: 12px;
