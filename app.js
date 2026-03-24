@@ -377,7 +377,7 @@ function makeStyle(mode) {
       },
       "pv-sites": {
         type: "geojson",
-        data: "./data/global_pv_sites_points.geojson",
+        data: "https://pub-80c436a85ac94757a93302c2e2bb32f5.r2.dev/global_pv_sites_points.geojson",
       },
     },
     layers: [
