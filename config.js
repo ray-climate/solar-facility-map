@@ -8,5 +8,5 @@ window.PV_DASHBOARD_CONFIG = {
   // Fill in your publication links.
   paperUrl: "https://www.nature.com/",
   zenodoUrl: "https://zenodo.org/records/18794231",
-  githubUrl: "https://github.com/"
+  githubUrl: "https://github.com/ray-climate/global-pv-generation-loss-dataset"
 };

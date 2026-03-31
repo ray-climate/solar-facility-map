@@ -4,7 +4,7 @@ const DEFAULT_CONFIG = {
   metadataUrl: "./metadata.json",
   paperUrl: "https://www.nature.com/",
   zenodoUrl: "https://zenodo.org/records/18794231",
-  githubUrl: "https://github.com/",
+  githubUrl: "https://github.com/ray-climate/global-pv-generation-loss-dataset",
 };
 
 const CONFIG = Object.assign({}, DEFAULT_CONFIG, window.PV_DASHBOARD_CONFIG || {});
