@@ -6,7 +6,7 @@ window.PV_DASHBOARD_CONFIG = {
   sourceLayer: "global_pv_facility_inventory",
 
   // Fill in your publication links.
-  paperUrl: "https://www.nature.com/",
+  paperUrl: "https://www.nature.com/articles/s41893-026-01836-5",
   zenodoUrl: "https://zenodo.org/records/18794231",
   githubUrl: "https://github.com/ray-climate/global-pv-generation-loss-dataset"
 };
